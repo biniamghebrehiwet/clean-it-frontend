@@ -1,0 +1,24 @@
+<div class="container-margin">
+  <div>
+    <h3>Orders Overview</h3><br>
+  </div>
+  <div class="row">
+    <div class="col-xs-2">
+      <label><strong>Search by Status:</strong></label>
+    </div>
+    <div class="col-xs-2">
+      <input
+        class="form-control"
+        [formControl]="orderSearch"
+      >
+    </div>
+  </div>
+  <br>
+  <!-- Ag-Grid Table for the orders overview -->
+  <ag-grid-angular
+    class="order ag-theme-alpine"
+    (gridReady)="initOrderGrid($event)"
+    [gridOptions]="gridOptions"
+  >
+  </ag-grid-angular>
+</div>
